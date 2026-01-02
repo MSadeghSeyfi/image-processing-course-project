@@ -6,7 +6,7 @@ Built with CustomTkinter
 
 import customtkinter as ctk
 from tkinter import filedialog, messagebox
-from PIL import Image, ImageTk
+from PIL import Image
 import numpy as np
 from typing import Optional, List
 
@@ -122,9 +122,18 @@ class ImageProcessorApp(ctk.CTk):
         )
         ops_label.pack(pady=5)
 
-        # Operations frame (will add buttons here later)
+        # Operations frame
         self.operations_frame = ctk.CTkFrame(self.sidebar)
         self.operations_frame.pack(fill="x", pady=5)
+
+        # --- Operation 1: Reduce Resolution ---
+        self.btn_reduce_res = ctk.CTkButton(
+            self.operations_frame,
+            text="1. Reduce Resolution (1/2)",
+            command=self.op_reduce_resolution,
+            height=35
+        )
+        self.btn_reduce_res.pack(fill="x", padx=10, pady=5)
 
     def _create_image_display(self):
         """Create image display area"""
@@ -151,8 +160,8 @@ class ImageProcessorApp(ctk.CTk):
         )
         self.image_label.pack(expand=True)
 
-        # Store PhotoImage reference
-        self.photo_image = None
+        # Store CTkImage reference
+        self.ctk_image = None
 
     def _create_status_bar(self):
         """Create status bar"""
@@ -279,14 +288,15 @@ class ImageProcessorApp(ctk.CTk):
         ratio = min(max_width / img.width, max_height / img.height, 1.0)
         new_size = (int(img.width * ratio), int(img.height * ratio))
 
-        # Resize for display
-        img_display = img.resize(new_size, Image.Resampling.LANCZOS)
-
-        # Convert to PhotoImage
-        self.photo_image = ImageTk.PhotoImage(img_display)
+        # Create CTkImage (handles HighDPI automatically)
+        self.ctk_image = ctk.CTkImage(
+            light_image=img,
+            dark_image=img,
+            size=new_size
+        )
 
         # Update label
-        self.image_label.configure(image=self.photo_image, text="")
+        self.image_label.configure(image=self.ctk_image, text="")
 
     def _update_buttons_state(self):
         """Update button states based on current state"""
@@ -327,6 +337,23 @@ class ImageProcessorApp(ctk.CTk):
         except Exception as e:
             self.history.pop()  # Remove failed state from history
             messagebox.showerror("Error", f"Operation failed:\n{str(e)}")
+
+    # ========================================
+    # Image Processing Operations
+    # ========================================
+
+    def op_reduce_resolution(self):
+        """Operation 1: Reduce resolution by half using subsampling"""
+        if self.current_image is None:
+            messagebox.showwarning("Warning", "Please load an image first!")
+            return
+
+        def reduce_resolution(img):
+            # Take every other pixel (subsampling)
+            return img[::2, ::2].copy()
+
+        self.apply_operation(reduce_resolution)
+        self.status_label.configure(text="Applied: Reduce Resolution (1/2)")
 
 
 if __name__ == "__main__":
