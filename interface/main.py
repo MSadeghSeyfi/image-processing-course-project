@@ -135,6 +135,15 @@ class ImageProcessorApp(ctk.CTk):
         )
         self.btn_reduce_res.pack(fill="x", padx=10, pady=5)
 
+        # --- Operation 2: Negative Image ---
+        self.btn_negative = ctk.CTkButton(
+            self.operations_frame,
+            text="2. Negative Image",
+            command=self.op_negative,
+            height=35
+        )
+        self.btn_negative.pack(fill="x", padx=10, pady=5)
+
     def _create_image_display(self):
         """Create image display area"""
         # Image info frame
@@ -354,6 +363,18 @@ class ImageProcessorApp(ctk.CTk):
 
         self.apply_operation(reduce_resolution)
         self.status_label.configure(text="Applied: Reduce Resolution (1/2)")
+
+    def op_negative(self):
+        """Operation 2: Create negative image (s = 255 - r)"""
+        if self.current_image is None:
+            messagebox.showwarning("Warning", "Please load an image first!")
+            return
+
+        def negative(img):
+            return 255 - img
+
+        self.apply_operation(negative)
+        self.status_label.configure(text="Applied: Negative Image (s = 255 - r)")
 
 
 if __name__ == "__main__":
