@@ -1,65 +1,65 @@
 # Image Processing Tool
 
-نرم‌افزار پردازش تصویر - دانشگاه کردستان
+Image Processing Software - University of Kurdistan
 
-## نحوه نصب و استفاده
+## Installation & Usage
 
-### روش ۱: اجرای مستقیم (ساده‌ترین روش)
-1. فایل `ImageProcessingTool.exe` را دانلود کنید
-2. روی فایل دابل کلیک کنید
-3. برنامه بدون نیاز به نصب چیز دیگری اجرا می‌شود
+### Method 1: Direct Execution (Simplest)
+1. Download the `ImageProcessingTool.exe` file
+2. Double-click the file
+3. The application runs without requiring any additional installation
 
-### روش ۲: ایجاد میانبر
-1. روی `ImageProcessingTool.exe` راست کلیک کنید
-2. گزینه "Create shortcut" را انتخاب کنید
-3. میانبر را به دسکتاپ یا منوی Start منتقل کنید
+### Method 2: Create Shortcut
+1. Right-click on `ImageProcessingTool.exe`
+2. Select "Create shortcut"
+3. Move the shortcut to your Desktop or Start menu
 
-## ویژگی‌های نرم‌افزار
+## Software Features
 
-### عملیات‌های پردازش تصویر:
-- **عملیات هندسی**: کاهش وضوح
-- **تبدیلات شدت**: نگاتیو، لگاریتمی، گاما
-- **هیستوگرام**: نمایش و برابرسازی هیستوگرام
-- **فیلترها**: تار کردن، واضح کردن، فیلتر میانه، فیلتر گاوسی
-- **تشخیص لبه**: بزرگای گرادیان، تشخیص لبه
-- **نویز**: نویز نمک و فلفل، نویز گاوسی
+### Image Processing Operations:
+- **Geometric Operations**: Resolution reduction
+- **Intensity Transformations**: Negative, Logarithmic, Gamma correction
+- **Histogram**: Display and equalization
+- **Filters**: Blur, Sharpen, Median filter, Gaussian filter
+- **Edge Detection**: Gradient magnitude, Edge detection
+- **Noise**: Salt & Pepper noise, Gaussian noise
 
-### امکانات دیگر:
-- بارگذاری و ذخیره تصاویر
-- بازگشت به تصویر قبلی (Undo)
-- بازگشت به تصویر اصلی (Reset)
-- نمایش هیستوگرام به صورت inline
-- نوار پیشرفت برای عملیات‌های طولانی
+### Additional Features:
+- Load and save images
+- Undo to previous image
+- Reset to original image
+- Inline histogram display
+- Progress bar for long operations
 
-## سیستم مورد نیاز
-- سیستم عامل: Windows 10 یا بالاتر
-- حافظه RAM: حداقل 2GB
-- فضای دیسک: 50MB
+## System Requirements
+- Operating System: Windows 10 or higher
+- RAM: Minimum 2GB
+- Disk Space: 50MB
 
-## نکات مهم
-- این نرم‌افزار کاملاً مستقل است و نیازی به نصب Python یا کتابخانه‌های دیگر ندارد
-- برای اجرا، ممکن است Windows SmartScreen هشدار بدهد. روی "More info" کلیک کرده و "Run anyway" را انتخاب کنید
-- اولین بار اجرا ممکن است کمی طول بکشد
+## Important Notes
+- This software is completely standalone and does not require Python or any libraries to be installed
+- When running, Windows SmartScreen may show a warning. Click "More info" and select "Run anyway"
+- First launch may take a moment
 
-## مشکلات رایج
+## Common Issues
 
-### برنامه اجرا نمی‌شود
-- مطمئن شوید که آنتی‌ویروس برنامه را مسدود نکرده است
-- سیستم عامل را به‌روز کنید
+### Application Won't Run
+- Make sure your antivirus hasn't blocked the application
+- Update your operating system
 
-### پیام خطای "Windows protected your PC"
-1. روی "More info" کلیک کنید
-2. دکمه "Run anyway" را بزنید
+### "Windows protected your PC" Message
+1. Click "More info"
+2. Click "Run anyway" button
 
-## اطلاعات تکنیکی
-- نسخه Python: 3.12.9
-- فریم‌ورک GUI: CustomTkinter 5.2.0
-- کتابخانه‌های اصلی: NumPy، Pillow
+## Technical Information
+- Python Version: 3.12.9
+- GUI Framework: CustomTkinter 5.2.0
+- Core Libraries: NumPy, Pillow
 
-## توسعه‌دهنده
-دانشگاه کردستان - دپارتمان کامپیوتر
+## Developer
+University of Kurdistan - Computer Department
 
 ---
 
-**نسخه**: 1.0.0
-**تاریخ انتشار**: January 2026
+**Version**: 1.0.0
+**Release Date**: January 2026
