@@ -119,28 +119,28 @@
 <table>
 <tr>
 <td width="50%">
-<img src="screenshots/2.png" alt="Intensity Transformations" width="100%"/>
-<p align="center"><em>Intensity Transformations</em></p>
+<img src="screenshots/2.png" alt="Show/Hide Histogram" width="100%"/>
+<p align="center"><em>Show/Hide Histogram</em></p>
 </td>
 <td width="50%">
-<img src="screenshots/3.png" alt="Histogram Operations" width="100%"/>
-<p align="center"><em>Histogram Operations</em></p>
+<img src="screenshots/3.png" alt="Gradient Magnitude Operation" width="100%"/>
+<p align="center"><em>Gradient Magnitude Operation</em></p>
 </td>
 </tr>
 <tr>
 <td width="50%">
-<img src="screenshots/4.png" alt="Filter Operations" width="100%"/>
-<p align="center"><em>Spatial Filters</em></p>
+<img src="screenshots/4.png" alt="Edge Detection" width="100%"/>
+<p align="center"><em>Edge Detection</em></p>
 </td>
 <td width="50%">
-<img src="screenshots/5.png" alt="Edge Detection" width="100%"/>
-<p align="center"><em>Edge Detection</em></p>
+<img src="screenshots/5.png" alt="Noise Operations & Advanced Features" width="100%"/>
+<p align="center"><em>Noise Operations & Advanced Features</em></p>
 </td>
 </tr>
 <tr>
 <td colspan="2">
-<img src="screenshots/6.png" alt="Advanced Features" width="100%"/>
-<p align="center"><em>Noise Operations & Advanced Features</em></p>
+<img src="screenshots/6.png" alt="Median Filter" width="100%"/>
+<p align="center"><em>Median Filter</em></p>
 </td>
 </tr>
 </table>
